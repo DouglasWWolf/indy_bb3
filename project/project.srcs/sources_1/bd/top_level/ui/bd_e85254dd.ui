@@ -1,0 +1,93 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-512,-60",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port AXIS_FD1 -pg 1 -lvl 2 -x 600 -y 80 -defaultsOSRD -right
+preplace port AXIS_MD1 -pg 1 -lvl 2 -x 600 -y 60 -defaultsOSRD -right
+preplace port M_AXI1 -pg 1 -lvl 2 -x 600 -y 100 -defaultsOSRD
+preplace port AXIS_FD0 -pg 1 -lvl 2 -x 600 -y 350 -defaultsOSRD -right
+preplace port AXIS_MD0 -pg 1 -lvl 0 -x -20 -y 320 -defaultsOSRD
+preplace port M_AXI0 -pg 1 -lvl 2 -x 600 -y 320 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x -20 -y 340 -defaultsOSRD
+preplace port port-id_sys_resetn -pg 1 -lvl 0 -x -20 -y 360 -defaultsOSRD
+preplace portBus FRAME_COUNT1 -pg 1 -lvl 2 -x 600 -y 120 -defaultsOSRD
+preplace portBus PACKET_SIZE -pg 1 -lvl 0 -x -20 -y 60 -defaultsOSRD
+preplace portBus FRAME_SIZE -pg 1 -lvl 0 -x -20 -y 380 -defaultsOSRD
+preplace portBus FD_RING_ADDR -pg 1 -lvl 0 -x -20 -y 400 -defaultsOSRD
+preplace portBus FD_RING_SIZE -pg 1 -lvl 0 -x -20 -y 420 -defaultsOSRD
+preplace portBus MD_RING_ADDR -pg 1 -lvl 0 -x -20 -y 440 -defaultsOSRD
+preplace portBus MD_RING_SIZE -pg 1 -lvl 0 -x -20 -y 460 -defaultsOSRD
+preplace portBus FC_ADDR -pg 1 -lvl 0 -x -20 -y 80 -defaultsOSRD
+preplace portBus FRAME_COUNT0 -pg 1 -lvl 2 -x 600 -y 380 -defaultsOSRD
+preplace inst rdmx_shim_1 -pg 1 -lvl 1 -x 360 -y 40 -swap {5 1 2 3 4 0 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 48 49 47 45 50 51 52 53 54 46 55} -defaultsOSRD -pinDir AXIS_FD right -pinY AXIS_FD 40R -pinDir AXIS_MD right -pinY AXIS_MD 20R -pinDir M_AXI right -pinY M_AXI 60R -pinDir clk left -pinY clk 60L -pinDir resetn left -pinY resetn 80L -pinBusDir FRAME_COUNT right -pinBusY FRAME_COUNT 80R -pinBusDir PACKET_SIZE left -pinBusY PACKET_SIZE 20L -pinBusDir FRAME_SIZE left -pinBusY FRAME_SIZE 100L -pinBusDir FD_RING_ADDR left -pinBusY FD_RING_ADDR 120L -pinBusDir FD_RING_SIZE left -pinBusY FD_RING_SIZE 140L -pinBusDir MD_RING_ADDR left -pinBusY MD_RING_ADDR 160L -pinBusDir MD_RING_SIZE left -pinBusY MD_RING_SIZE 180L -pinBusDir FC_ADDR left -pinBusY FC_ADDR 40L -pinDir eof right -pinY eof 100R
+preplace inst rdmx_shim_0 -pg 1 -lvl 1 -x 360 -y 300 -swap {9 1 2 3 4 5 6 7 8 0 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 48 49 47 45 50 51 52 53 54 46 55} -defaultsOSRD -pinDir AXIS_FD right -pinY AXIS_FD 60R -pinDir AXIS_MD left -pinY AXIS_MD 20L -pinDir M_AXI right -pinY M_AXI 20R -pinDir clk left -pinY clk 80L -pinDir resetn left -pinY resetn 100L -pinBusDir FRAME_COUNT right -pinBusY FRAME_COUNT 80R -pinBusDir PACKET_SIZE left -pinBusY PACKET_SIZE 40L -pinBusDir FRAME_SIZE left -pinBusY FRAME_SIZE 120L -pinBusDir FD_RING_ADDR left -pinBusY FD_RING_ADDR 140L -pinBusDir FD_RING_SIZE left -pinBusY FD_RING_SIZE 160L -pinBusDir MD_RING_ADDR left -pinBusY MD_RING_ADDR 180L -pinBusDir MD_RING_SIZE left -pinBusY MD_RING_SIZE 200L -pinBusDir FC_ADDR left -pinBusY FC_ADDR 60L -pinDir eof right -pinY eof 100R
+preplace netloc FC_ADDR_1 1 0 1 150 80n
+preplace netloc FD_RING_ADDR_1 1 0 1 70 160n
+preplace netloc FD_RING_SIZE_1 1 0 1 90 180n
+preplace netloc FRAME_SIZE_1 1 0 1 130 140n
+preplace netloc MD_RING_ADDR_1 1 0 1 30 200n
+preplace netloc MD_RING_SIZE_1 1 0 1 50 220n
+preplace netloc PACKET_SIZE_1 1 0 1 190 60n
+preplace netloc rdmx_shim_0_FRAME_COUNT 1 1 1 NJ 380
+preplace netloc rdmx_shim_1_FRAME_COUNT 1 1 1 NJ 120
+preplace netloc sys_clk_1 1 0 1 170 100n
+preplace netloc sys_resetn_1 1 0 1 110 120n
+preplace netloc AXIS_FD0_1 1 1 1 530 350n
+preplace netloc AXIS_FD1_1 1 1 1 N 80
+preplace netloc AXIS_MD0_1 1 0 1 NJ 320
+preplace netloc AXIS_MD1_1 1 1 1 N 60
+preplace netloc rdmx_shim_0_M_AXI 1 1 1 NJ 320
+preplace netloc rdmx_shim_1_M_AXI 1 1 1 NJ 100
+levelinfo -pg 1 -20 360 600
+pagesize -pg 1 -db -bbox -sgen -230 0 810 560
+",
+   "No Loops_ScaleFactor":"1.0",
+   "No Loops_TopLeft":"-374,-38",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port AXIS_FD1 -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port AXIS_MD1 -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port M_AXI1 -pg 1 -lvl 2 -x 460 -y 130 -defaultsOSRD
+preplace port AXIS_FD0 -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port AXIS_MD0 -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace port M_AXI0 -pg 1 -lvl 2 -x 460 -y 430 -defaultsOSRD
+preplace port port-id_sys_clk -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port port-id_sys_resetn -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace portBus FRAME_COUNT1 -pg 1 -lvl 2 -x 460 -y 150 -defaultsOSRD
+preplace portBus PACKET_SIZE -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
+preplace portBus FRAME_SIZE -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
+preplace portBus FD_RING_ADDR -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD
+preplace portBus FD_RING_SIZE -pg 1 -lvl 0 -x 0 -y 470 -defaultsOSRD
+preplace portBus MD_RING_ADDR -pg 1 -lvl 0 -x 0 -y 490 -defaultsOSRD
+preplace portBus MD_RING_SIZE -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
+preplace portBus FC_ADDR -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace portBus FRAME_COUNT0 -pg 1 -lvl 2 -x 460 -y 450 -defaultsOSRD
+preplace inst rdmx_shim_1 -pg 1 -lvl 1 -x 270 -y 150 -defaultsOSRD
+preplace inst rdmx_shim_0 -pg 1 -lvl 1 -x 270 -y 450 -defaultsOSRD
+preplace netloc sys_clk_1 1 0 1 40 90n
+preplace netloc sys_resetn_1 1 0 1 60 110n
+preplace netloc rdmx_shim_1_FRAME_COUNT 1 1 1 NJ 150
+preplace netloc PACKET_SIZE_1 1 0 1 100 130n
+preplace netloc FRAME_SIZE_1 1 0 1 90 150n
+preplace netloc FD_RING_ADDR_1 1 0 1 80 170n
+preplace netloc FD_RING_SIZE_1 1 0 1 70 190n
+preplace netloc MD_RING_ADDR_1 1 0 1 50 210n
+preplace netloc MD_RING_SIZE_1 1 0 1 30 230n
+preplace netloc FC_ADDR_1 1 0 1 20 250n
+preplace netloc rdmx_shim_0_FRAME_COUNT 1 1 1 NJ 450
+preplace netloc AXIS_FD1_1 1 0 1 NJ 50
+preplace netloc AXIS_MD1_1 1 0 1 NJ 70
+preplace netloc rdmx_shim_1_M_AXI 1 1 1 NJ 130
+preplace netloc AXIS_FD0_1 1 0 1 NJ 350
+preplace netloc AXIS_MD0_1 1 0 1 NJ 370
+preplace netloc rdmx_shim_0_M_AXI 1 1 1 NJ 430
+levelinfo -pg 1 0 270 460
+pagesize -pg 1 -db -bbox -sgen -180 0 640 600
+"
+}
+

@@ -185,7 +185,7 @@
       },
       "address_spaces": {
         "M_AXI": {
-          "range": "4096",
+          "range": "0x1000",
           "display_name": "M_AXI",
           "width": "32"
         }

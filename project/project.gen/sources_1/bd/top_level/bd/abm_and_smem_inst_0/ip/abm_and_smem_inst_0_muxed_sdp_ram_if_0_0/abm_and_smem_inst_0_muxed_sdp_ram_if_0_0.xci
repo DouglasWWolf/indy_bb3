@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_muxed_sdp_ram_if_0_0",
-    "cell_name": "abm_manager/muxed_sdp_ram_if_0",
+    "cell_name": "abm_and_smem/abm_manager/muxed_sdp_ram_if_0",
     "component_reference": "xilinx.com:module_ref:muxed_sdp_ram_if:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

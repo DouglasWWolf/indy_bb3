@@ -9,18 +9,18 @@
    "DisplayTieOff":"1",
    "ExpandedHierarchyInLayout":"",
    "HierExpandStatus_comment_0":"false",
-   "No Loops_ExpandedHierarchyInLayout":"/frame_gen",
+   "No Loops_ExpandedHierarchyInLayout":"",
    "No Loops_Layers":"/pcie_bridge/pcie_bridge_0_axi_aresetn:true|/pcie_bridge/pcie_bridge_0_axi_aclk:true|/abm_and_smem/smem_writer/hs_clock_hs_clock:true|/channel_0/eth/cmac_usplus_gt_txusrclk2:true|/channel_1/eth/cmac_usplus_gt_txusrclk2:true|/abm_and_smem/chip_spi_mux/chip_spi_free_clk:true|/pcie_bridge/clock_buffer_IBUF_DS_ODIV2:true|/abm_and_smem/chip_spi_mux/chip_spi_spi_clk:true|/pcie_bridge/clock_buffer_IBUF_OUT:true|/channel_1/eth/cmac_control_rx_resetn_out:true|/channel_0/eth/cmac_control_rx_resetn_out:true|/channel_1/eth/cmac_control_reset_rx_datapath:true|/channel_0/eth/cmac_control_reset_rx_datapath:true|/abm_and_smem/chipif_cdc/clock_manager/chipif_clock_chipif_clk1:true|/cmac/eth0/cmac_usplus_gt_txusrclk2:true|/cmac/eth_1/cmac_usplus_gt_txusrclk2:true|/cmac/eth_1/cmac_control_rx_resetn_out:true|/cmac/eth0/cmac_control_reset_rx_datapath:true|/cmac/eth_1/cmac_control_reset_rx_datapath:true|/cmac/eth0/cmac_control_rx_resetn_out:true|/indy_lvds/clk_768mhz_clk_768:true|/clk_192/clk_wiz_clk192:true|/indy_lvds/lvds_source/sensor_emu/sensor_emu_ctl_axi_0_o_FIFO_CTL_f1_reset:true|/indy_lvds/lvds_source/sensor_emu/sensor_emu_ctl_axi_0_o_FIFO_CTL_f0_reset:true|/indy_lvds/lvds_ctl_reset_hssio:true|",
    "No Loops_Layout":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
 preplace port pcie_refclk -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
 preplace port pcie_mgt -pg 1 -lvl 0 -x 0 -y 420 -defaultsOSRD -left
-preplace port qsfp0_gt -pg 1 -lvl 6 -x 3000 -y 690 -defaultsOSRD
-preplace port qsfp0_clk -pg 1 -lvl 6 -x 3000 -y 710 -defaultsOSRD -right
-preplace port qsfp1_gt -pg 1 -lvl 6 -x 3000 -y 730 -defaultsOSRD
-preplace port qsfp1_clk -pg 1 -lvl 6 -x 3000 -y 750 -defaultsOSRD -right
-preplace port init_clk -pg 1 -lvl 6 -x 3000 -y 580 -defaultsOSRD -right
-preplace port LVDS_CLK -pg 1 -lvl 6 -x 3000 -y 240 -defaultsOSRD
+preplace port qsfp0_gt -pg 1 -lvl 6 -x 1840 -y 690 -defaultsOSRD
+preplace port qsfp0_clk -pg 1 -lvl 6 -x 1840 -y 710 -defaultsOSRD -right
+preplace port qsfp1_gt -pg 1 -lvl 6 -x 1840 -y 730 -defaultsOSRD
+preplace port qsfp1_clk -pg 1 -lvl 6 -x 1840 -y 750 -defaultsOSRD -right
+preplace port init_clk -pg 1 -lvl 6 -x 1840 -y 580 -defaultsOSRD -right
+preplace port LVDS_CLK -pg 1 -lvl 6 -x 1840 -y 240 -defaultsOSRD
 preplace port port-id_CHIP_HSI_CLK -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD -left
 preplace port port-id_CHIP_HSI_CMD -pg 1 -lvl 0 -x 0 -y 790 -defaultsOSRD -left
 preplace port port-id_CHIP_HSI_VALID -pg 1 -lvl 0 -x 0 -y 570 -defaultsOSRD -left
@@ -37,51 +37,47 @@ preplace port port-id_UCI_ADC_SCK -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD -left
 preplace port port-id_UCI_ADC_MOSI -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD -left
 preplace port port-id_UCI_ADC_MISO -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
 preplace port port-id_LVL_TRSL_OE_N -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD -left
-preplace port port-id_LVDS_BANKA_clk_n -pg 1 -lvl 6 -x 3000 -y 340 -defaultsOSRD -right
-preplace port port-id_LVDS_BANKA_clk_p -pg 1 -lvl 6 -x 3000 -y 320 -defaultsOSRD -right
-preplace port port-id_LVDS_BANKB_clk_n -pg 1 -lvl 6 -x 3000 -y 380 -defaultsOSRD -right
-preplace port port-id_LVDS_BANKB_clk_p -pg 1 -lvl 6 -x 3000 -y 360 -defaultsOSRD -right
-preplace port port-id_LVDS_BANKC_clk_n -pg 1 -lvl 6 -x 3000 -y 420 -defaultsOSRD -right
-preplace port port-id_LVDS_BANKC_clk_p -pg 1 -lvl 6 -x 3000 -y 400 -defaultsOSRD -right
-preplace port port-id_CHIP_PA_SYNC -pg 1 -lvl 6 -x 3000 -y 260 -defaultsOSRD -right
-preplace port port-id_rs0 -pg 1 -lvl 6 -x 3000 -y 110 -defaultsOSRD
-preplace port port-id_rs256 -pg 1 -lvl 6 -x 3000 -y 130 -defaultsOSRD
-preplace portBus qsfp0_up -pg 1 -lvl 6 -x 3000 -y 770 -defaultsOSRD
-preplace portBus qsfp1_up -pg 1 -lvl 6 -x 3000 -y 790 -defaultsOSRD
+preplace port port-id_LVDS_BANKA_clk_n -pg 1 -lvl 6 -x 1840 -y 340 -defaultsOSRD -right
+preplace port port-id_LVDS_BANKA_clk_p -pg 1 -lvl 6 -x 1840 -y 320 -defaultsOSRD -right
+preplace port port-id_LVDS_BANKB_clk_n -pg 1 -lvl 6 -x 1840 -y 380 -defaultsOSRD -right
+preplace port port-id_LVDS_BANKB_clk_p -pg 1 -lvl 6 -x 1840 -y 360 -defaultsOSRD -right
+preplace port port-id_LVDS_BANKC_clk_n -pg 1 -lvl 6 -x 1840 -y 420 -defaultsOSRD -right
+preplace port port-id_LVDS_BANKC_clk_p -pg 1 -lvl 6 -x 1840 -y 400 -defaultsOSRD -right
+preplace port port-id_CHIP_PA_SYNC -pg 1 -lvl 6 -x 1840 -y 300 -defaultsOSRD -right
+preplace port port-id_rs0 -pg 1 -lvl 6 -x 1840 -y 130 -defaultsOSRD
+preplace port port-id_rs256 -pg 1 -lvl 6 -x 1840 -y 150 -defaultsOSRD
+preplace portBus qsfp0_up -pg 1 -lvl 6 -x 1840 -y 770 -defaultsOSRD
+preplace portBus qsfp1_up -pg 1 -lvl 6 -x 1840 -y 790 -defaultsOSRD
 preplace portBus CHIP_HSI_DATA -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD -left
 preplace portBus UCI_ADC_CSN -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD -left
-preplace portBus qsfp_rst_l -pg 1 -lvl 6 -x 3000 -y 1000 -defaultsOSRD
-preplace portBus qsfp_lp -pg 1 -lvl 6 -x 3000 -y 1020 -defaultsOSRD
-preplace portBus LVDS_DN -pg 1 -lvl 6 -x 3000 -y 460 -defaultsOSRD -right
-preplace portBus LVDS_DP -pg 1 -lvl 6 -x 3000 -y 440 -defaultsOSRD -right
-preplace portBus GPIO_BYTE_DIR -pg 1 -lvl 6 -x 3000 -y 70 -defaultsOSRD
-preplace portBus GPIO15_DIR -pg 1 -lvl 6 -x 3000 -y 90 -defaultsOSRD
-preplace portBus GPIO13 -pg 1 -lvl 6 -x 3000 -y 30 -defaultsOSRD
-preplace portBus GPIO15 -pg 1 -lvl 6 -x 3000 -y 50 -defaultsOSRD
-preplace inst pcie_bridge -pg 1 -lvl 1 -x 170 -y 380 -swap {0 1 2 41 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 84 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 3 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 121 120} -defaultsOSRD -pinDir PCIE_REFCLK left -pinY PCIE_REFCLK 20L -pinDir S00_AXI right -pinY S00_AXI 80R -pinDir S01_AXI right -pinY S01_AXI 100R -pinDir pcie_mgt left -pinY pcie_mgt 40L -pinDir M_AXI_B right -pinY M_AXI_B 20R -pinDir sys_clk right -pinY sys_clk 140R -pinDir sys_resetn right -pinY sys_resetn 120R
+preplace portBus qsfp_rst_l -pg 1 -lvl 6 -x 1840 -y 1000 -defaultsOSRD
+preplace portBus qsfp_lp -pg 1 -lvl 6 -x 1840 -y 1020 -defaultsOSRD
+preplace portBus LVDS_DN -pg 1 -lvl 6 -x 1840 -y 460 -defaultsOSRD -right
+preplace portBus LVDS_DP -pg 1 -lvl 6 -x 1840 -y 440 -defaultsOSRD -right
+preplace portBus GPIO_BYTE_DIR -pg 1 -lvl 6 -x 1840 -y 90 -defaultsOSRD
+preplace portBus GPIO15_DIR -pg 1 -lvl 6 -x 1840 -y 110 -defaultsOSRD
+preplace portBus GPIO13 -pg 1 -lvl 6 -x 1840 -y 50 -defaultsOSRD
+preplace portBus GPIO15 -pg 1 -lvl 6 -x 1840 -y 70 -defaultsOSRD
+preplace inst pcie_bridge -pg 1 -lvl 1 -x 170 -y 380 -swap {0 1 2 39 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 80 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 3 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 117 116} -defaultsOSRD -pinDir PCIE_REFCLK left -pinY PCIE_REFCLK 20L -pinDir S00_AXI right -pinY S00_AXI 80R -pinDir S01_AXI right -pinY S01_AXI 100R -pinDir pcie_mgt left -pinY pcie_mgt 40L -pinDir M_AXI_B right -pinY M_AXI_B 20R -pinDir sys_clk right -pinY sys_clk 140R -pinDir sys_resetn right -pinY sys_resetn 120R
 preplace inst smartconnect -pg 1 -lvl 3 -x 860 -y 70 -swap {78 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 178 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 118 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 58 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 0 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 98 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 38 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 200 199 198} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 330L -pinDir M00_AXI right -pinY M00_AXI 640R -pinDir M01_AXI left -pinY M01_AXI 410L -pinDir M02_AXI left -pinY M02_AXI 180L -pinDir M03_AXI left -pinY M03_AXI 50L -pinDir M04_AXI left -pinY M04_AXI 390L -pinDir M05_AXI right -pinY M05_AXI 170R -pinDir M06_AXI right -pinY M06_AXI 190R -pinDir M07_AXI right -pinY M07_AXI 20R -pinDir aclk left -pinY aclk 680L -pinDir aclk1 right -pinY aclk1 680R -pinDir aresetn left -pinY aresetn 660L
 preplace inst allow_writes_to_smem -pg 1 -lvl 1 -x 170 -y 650 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
 preplace inst abm_and_smem -pg 1 -lvl 2 -x 520 -y 440 -swap {142 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 162 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 0 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 71 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 192 188 187 189 182 186 190 183 184 185 191} -defaultsOSRD -pinDir S_AXI_RAM0_ETH right -pinY S_AXI_RAM0_ETH 370R -pinDir S_AXI_RAM0_PCI left -pinY S_AXI_RAM0_PCI 20L -pinDir S_AXI_RAM1_ETH right -pinY S_AXI_RAM1_ETH 390R -pinDir S_AXI_RAM1_PCI left -pinY S_AXI_RAM1_PCI 40L -pinDir AXI_CLOCK_CTL right -pinY AXI_CLOCK_CTL 20R -pinDir S_AXI_CTL right -pinY S_AXI_CTL 40R -pinDir sys_clk left -pinY sys_clk 390L -pinDir pin_spi_cs_n left -pinY pin_spi_cs_n 310L -pinDir pin_spi_miso left -pinY pin_spi_miso 290L -pinDir pin_spi_mosi left -pinY pin_spi_mosi 330L -pinDir sys_resetn left -pinY sys_resetn 60L -pinDir sys_smem_wen left -pinY sys_smem_wen 230L -pinDir pin_hsi_cmd left -pinY pin_hsi_cmd 350L -pinDir pin_hsi_valid left -pinY pin_hsi_valid 130L -pinBusDir pin_hsi_data left -pinBusY pin_hsi_data 150L -pinDir pin_hsi_pclk left -pinY pin_hsi_pclk 170L -pinDir pin_spi_pclk left -pinY pin_spi_pclk 370L
 preplace inst chip_power -pg 1 -lvl 1 -x 170 -y 40 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 20 25 26 24 27 23 22} -defaultsOSRD -pinDir S_AXI right -pinY S_AXI 80R -pinDir clk right -pinY clk 120R -pinDir resetn right -pinY resetn 100R -pinDir CHIP_VDDIO left -pinY CHIP_VDDIO 80L -pinDir CHIP_VDD left -pinY CHIP_VDD 100L -pinDir CHIP_VDDLVDS left -pinY CHIP_VDDLVDS 60L -pinDir CHIP_VDDA left -pinY CHIP_VDDA 120L -pinDir CHIP_RESET_N left -pinY CHIP_RESET_N 40L -pinDir LVL_TRSL_OE_N left -pinY LVL_TRSL_OE_N 20L
 preplace inst adc_bank -pg 1 -lvl 1 -x 170 -y 230 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 21 20 24 25 22 23} -defaultsOSRD -pinDir S_AXI_CTL right -pinY S_AXI_CTL 20R -pinDir clk right -pinY clk 60R -pinDir resetn right -pinY resetn 40R -pinBusDir UCI_ADC_CSN left -pinBusY UCI_ADC_CSN 60L -pinDir UCI_ADC_SCK left -pinY UCI_ADC_SCK 80L -pinDir UCI_ADC_MOSI left -pinY UCI_ADC_MOSI 20L -pinDir UCI_ADC_MISO left -pinY UCI_ADC_MISO 40L
-preplace inst qsfp_pins -pg 1 -lvl 5 -x 1880 -y 1770 -defaultsOSRD -pinBusDir qsfp_rst_l right -pinBusY qsfp_rst_l 40R -pinBusDir qsfp_lp right -pinBusY qsfp_lp 60R
-preplace inst cmac -pg 1 -lvl 5 -x 1880 -y 1460 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 57 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 14 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 103 101 100 98 102 99} -defaultsOSRD -pinDir qsfp0_gt right -pinY qsfp0_gt 50R -pinDir qsfp0_clk right -pinY qsfp0_clk 70R -pinDir tx0_in left -pinY tx0_in 20L -pinDir M_AXI0 left -pinY M_AXI0 140L -pinDir qsfp1_gt right -pinY qsfp1_gt 90R -pinDir qsfp1_clk right -pinY qsfp1_clk 110R -pinDir tx1_in left -pinY tx1_in 40L -pinDir M_AXI1 left -pinY M_AXI1 160L -pinDir sys_clk left -pinY sys_clk 240L -pinDir sys_resetn_in left -pinY sys_resetn_in 220L -pinBusDir qsfp0_up right -pinBusY qsfp0_up 130R -pinDir cmac0_clk left -pinY cmac0_clk 180L -pinBusDir qsfp1_up right -pinBusY qsfp1_up 150R -pinDir cmac1_clk left -pinY cmac1_clk 200L
+preplace inst qsfp_pins -pg 1 -lvl 5 -x 1610 -y 980 -defaultsOSRD -pinBusDir qsfp_rst_l right -pinBusY qsfp_rst_l 20R -pinBusDir qsfp_lp right -pinBusY qsfp_lp 40R
+preplace inst cmac -pg 1 -lvl 5 -x 1610 -y 670 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 57 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 14 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 103 101 100 98 102 99} -defaultsOSRD -pinDir qsfp0_gt right -pinY qsfp0_gt 20R -pinDir qsfp0_clk right -pinY qsfp0_clk 40R -pinDir tx0_in left -pinY tx0_in 20L -pinDir M_AXI0 left -pinY M_AXI0 140L -pinDir qsfp1_gt right -pinY qsfp1_gt 60R -pinDir qsfp1_clk right -pinY qsfp1_clk 80R -pinDir tx1_in left -pinY tx1_in 40L -pinDir M_AXI1 left -pinY M_AXI1 160L -pinDir sys_clk left -pinY sys_clk 240L -pinDir sys_resetn_in left -pinY sys_resetn_in 220L -pinBusDir qsfp0_up right -pinBusY qsfp0_up 100R -pinDir cmac0_clk left -pinY cmac0_clk 180L -pinBusDir qsfp1_up right -pinBusY qsfp1_up 120R -pinDir cmac1_clk left -pinY cmac1_clk 200L
 preplace inst mindy_core -pg 1 -lvl 4 -x 1190 -y 300 -defaultsOSRD -pinDir AXIS_FD_IN right -pinY AXIS_FD_IN 20R -pinDir S_AXI_CTL left -pinY S_AXI_CTL 410L -pinDir AXIS_TX0 right -pinY AXIS_TX0 390R -pinDir AXIS_TX1 right -pinY AXIS_TX1 410R -pinDir sys_resetn left -pinY sys_resetn 430L -pinDir cmac0_clk right -pinY cmac0_clk 430R -pinDir cmac1_clk right -pinY cmac1_clk 450R -pinDir sys_clk left -pinY sys_clk 450L
-preplace inst indy_lvds -pg 1 -lvl 5 -x 1880 -y 1000 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 51 50 53 52 57 54 59 58 56 62 47 48 49 55 60 61} -defaultsOSRD -pinDir S_AXI_CTL left -pinY S_AXI_CTL 20L -pinDir LVDS_CLK right -pinY LVDS_CLK 20R -pinDir S_AXI_SENSOR_EMU left -pinY S_AXI_SENSOR_EMU 40L -pinDir axis_out left -pinY axis_out 100L -pinDir LVDS_BANKA_clk_n right -pinY LVDS_BANKA_clk_n 120R -pinDir LVDS_BANKA_clk_p right -pinY LVDS_BANKA_clk_p 100R -pinDir LVDS_BANKB_clk_n right -pinY LVDS_BANKB_clk_n 160R -pinDir LVDS_BANKB_clk_p right -pinY LVDS_BANKB_clk_p 140R -pinDir LVDS_BANKC_clk_n right -pinY LVDS_BANKC_clk_n 200R -pinDir LVDS_BANKC_clk_p right -pinY LVDS_BANKC_clk_p 180R -pinBusDir LVDS_DN right -pinBusY LVDS_DN 240R -pinBusDir LVDS_DP right -pinBusY LVDS_DP 220R -pinDir clk_192 left -pinY clk_192 140L -pinDir resetn_192 left -pinY resetn_192 240L -pinDir rs0 right -pinY rs0 40R -pinDir rs256 right -pinY rs256 60R -pinDir pa_sync_in right -pinY pa_sync_in 80R -pinDir pa_sync_out left -pinY pa_sync_out 120L -pinDir sys_resetn left -pinY sys_resetn 160L -pinDir sys_clk left -pinY sys_clk 220L
-preplace inst clk_192 -pg 1 -lvl 5 -x 1880 -y 1330 -swap {0 1 2 4 5 3} -defaultsOSRD -pinDir init_clk right -pinY init_clk 20R -pinDir clk192 left -pinY clk192 40L -pinDir sys_resetn left -pinY sys_resetn 60L -pinDir resetn_192 left -pinY resetn_192 20L
-preplace inst frame_gen -pg 1 -lvl 5 -x 1880 -y 20 -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 180L -pinDir clk_192 left -pinY clk_192 200L -pinDir resetn_192 left -pinY resetn_192 220L -pinDir pa_sync_in left -pinY pa_sync_in 240L -pinDir rs0 right -pinY rs0 800R -pinDir rs256 right -pinY rs256 900R -pinBusDir GPIO_BYTE_DIR right -pinBusY GPIO_BYTE_DIR 360R -pinBusDir GPIO15_DIR right -pinBusY GPIO15_DIR 460R -pinDir raw_pa_sync right -pinY raw_pa_sync 920R
-preplace inst frame_gen|framegen_ctl -pg 1 -lvl 1 -x 1910 -y 150 -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 20L -pinDir clk left -pinY clk 40L -pinDir resetn left -pinY resetn 60L -pinDir pa_sync_raw left -pinY pa_sync_raw 80L -pinDir rs0 right -pinY rs0 20R -pinDir rs256 right -pinY rs256 40R
-preplace inst frame_gen|ilconstant_0 -pg 1 -lvl 2 -x 2170 -y 370 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
-preplace inst frame_gen|ilconstant_1 -pg 1 -lvl 2 -x 2170 -y 470 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
-preplace inst frame_gen|system_ila_0 -pg 1 -lvl 2 -x 2170 -y 90 -defaultsOSRD -pinDir clk left -pinY clk 20L -pinBusDir probe0 left -pinBusY probe0 40L -pinBusDir probe1 left -pinBusY probe1 60L -pinBusDir probe2 left -pinBusY probe2 200L -pinBusDir probe3 right -pinBusY probe3 200R
-preplace netloc LVDS_BANKA_clk_n_1 1 5 1 2680 340n
-preplace netloc LVDS_BANKA_clk_p_1 1 5 1 2660 320n
-preplace netloc LVDS_BANKB_clk_n_1 1 5 1 2720 380n
-preplace netloc LVDS_BANKB_clk_p_1 1 5 1 2700 360n
-preplace netloc LVDS_BANKC_clk_n_1 1 5 1 2760 420n
-preplace netloc LVDS_BANKC_clk_p_1 1 5 1 2740 400n
-preplace netloc LVDS_DN_1 1 5 1 2800 460n
-preplace netloc LVDS_DP_1 1 5 1 2780 440n
+preplace inst indy_lvds -pg 1 -lvl 5 -x 1610 -y 220 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 51 50 53 52 57 54 59 58 60 56 47 48 49 55 61 62} -defaultsOSRD -pinDir S_AXI_CTL left -pinY S_AXI_CTL 20L -pinDir LVDS_CLK right -pinY LVDS_CLK 20R -pinDir S_AXI_SENSOR_EMU left -pinY S_AXI_SENSOR_EMU 40L -pinDir axis_out left -pinY axis_out 100L -pinDir LVDS_BANKA_clk_n right -pinY LVDS_BANKA_clk_n 120R -pinDir LVDS_BANKA_clk_p right -pinY LVDS_BANKA_clk_p 100R -pinDir LVDS_BANKB_clk_n right -pinY LVDS_BANKB_clk_n 160R -pinDir LVDS_BANKB_clk_p right -pinY LVDS_BANKB_clk_p 140R -pinDir LVDS_BANKC_clk_n right -pinY LVDS_BANKC_clk_n 200R -pinDir LVDS_BANKC_clk_p right -pinY LVDS_BANKC_clk_p 180R -pinBusDir LVDS_DN right -pinBusY LVDS_DN 240R -pinBusDir LVDS_DP right -pinBusY LVDS_DP 220R -pinDir clk_192 left -pinY clk_192 200L -pinDir resetn_192 left -pinY resetn_192 140L -pinDir rs0 right -pinY rs0 40R -pinDir rs256 right -pinY rs256 60R -pinDir pa_sync_in right -pinY pa_sync_in 80R -pinDir pa_sync_out left -pinY pa_sync_out 120L -pinDir sys_resetn left -pinY sys_resetn 220L -pinDir sys_clk left -pinY sys_clk 240L
+preplace inst clk_192 -pg 1 -lvl 5 -x 1610 -y 560 -defaultsOSRD -pinDir init_clk right -pinY init_clk 20R -pinDir clk192 left -pinY clk192 20L -pinDir sys_resetn left -pinY sys_resetn 40L -pinDir resetn_192 right -pinY resetn_192 40R
+preplace inst frame_gen -pg 1 -lvl 5 -x 1610 -y 70 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 25 26 23 24} -defaultsOSRD -pinDir S_AXI left -pinY S_AXI 20L -pinDir clk_192 left -pinY clk_192 40L -pinDir resetn_192 left -pinY resetn_192 60L -pinDir pa_sync_in left -pinY pa_sync_in 80L -pinDir rs0 right -pinY rs0 60R -pinDir rs256 right -pinY rs256 80R -pinBusDir GPIO_BYTE_DIR right -pinBusY GPIO_BYTE_DIR 20R -pinBusDir GPIO15_DIR right -pinBusY GPIO15_DIR 40R
+preplace netloc LVDS_BANKA_clk_n_1 1 5 1 N 340
+preplace netloc LVDS_BANKA_clk_p_1 1 5 1 N 320
+preplace netloc LVDS_BANKB_clk_n_1 1 5 1 N 380
+preplace netloc LVDS_BANKB_clk_p_1 1 5 1 N 360
+preplace netloc LVDS_BANKC_clk_n_1 1 5 1 N 420
+preplace netloc LVDS_BANKC_clk_p_1 1 5 1 N 400
+preplace netloc LVDS_DN_1 1 5 1 N 460
+preplace netloc LVDS_DP_1 1 5 1 N 440
 preplace netloc UCI_ADC_MISO_1 1 0 1 N 270
 preplace netloc abm_and_smem_ext_hsi_clk 1 0 2 NJ 610 NJ
 preplace netloc abm_and_smem_ext_hsi_cmd 1 0 2 NJ 790 NJ
@@ -91,19 +87,19 @@ preplace netloc abm_and_smem_ext_spi_clk 1 0 2 NJ 810 NJ
 preplace netloc abm_and_smem_ext_spi_cs_n 1 0 2 NJ 750 NJ
 preplace netloc abm_and_smem_ext_spi_mosi 1 0 2 NJ 770 NJ
 preplace netloc allow_writes_to_smem_dout1 1 1 1 NJ 670
-preplace netloc channel_0_rx_aligned 1 5 1 2920 770n
-preplace netloc channel_1_rx_aligned 1 5 1 2940 790n
+preplace netloc channel_0_rx_aligned 1 5 1 N 770
+preplace netloc channel_1_rx_aligned 1 5 1 N 790
 preplace netloc chip_power_LVL_TRSL_OE_N 1 0 1 NJ 60
-preplace netloc clk_192_resetn_192 1 4 1 1580 240n
-preplace netloc clk_wiz_clk192 1 3 2 1020J 850 1540
-preplace netloc cmac_cmac0_clk 1 4 1 1440 730n
+preplace netloc clk_192_resetn_192 1 4 2 1400 520 1800
+preplace netloc clk_wiz_clk192 1 3 2 1020J 850 1340
+preplace netloc cmac_cmac0_clk 1 4 1 1420 730n
 preplace netloc cmac_cmac1_clk 1 4 1 1400 750n
 preplace netloc ext_spi_miso_1 1 0 2 NJ 730 N
-preplace netloc frame_gen_GPIO15_DIR 1 5 1 2560 90n
-preplace netloc frame_gen_GPIO_BYTE_DIR 1 5 1 2540 30n
-preplace netloc frame_gen_rs0 1 5 1 2580 110n
-preplace netloc frame_gen_rs256 1 5 1 2620 130n
-preplace netloc indy_lvds_pa_sync_out 1 4 1 1600 260n
+preplace netloc frame_gen_GPIO15_DIR 1 5 1 N 110
+preplace netloc frame_gen_GPIO_BYTE_DIR 1 5 1 1820 50n
+preplace netloc frame_gen_rs0 1 5 1 1820 130n
+preplace netloc frame_gen_rs256 1 5 1 1800 150n
+preplace netloc indy_lvds_pa_sync_out 1 4 1 1420 150n
 preplace netloc indy_power_ctl_0_chip_reset_n 1 0 1 NJ 80
 preplace netloc indy_power_ctl_0_chip_vdd_n 1 0 1 NJ 140
 preplace netloc indy_power_ctl_0_chip_vdda_n 1 0 1 NJ 160
@@ -112,51 +108,40 @@ preplace netloc indy_power_ctl_0_chip_vddlvds_n 1 0 1 NJ 100
 preplace netloc ltc1867l_slave_select 1 0 1 NJ 290
 preplace netloc ltc1867l_spi_mosi 1 0 1 NJ 250
 preplace netloc ltc1867l_spi_sclk 1 0 1 NJ 310
-preplace netloc pa_sync_in_1 1 5 1 2640J 260n
-preplace netloc pcie_bridge_0_axi_aclk 1 1 4 320 910 720J 890 1040 890 1340
-preplace netloc pcie_bridge_0_axi_aresetn 1 1 4 340 890 700 870 1000 870 1360
-preplace netloc qsfp_pins_qsfp_lp 1 5 1 2980 1020n
-preplace netloc qsfp_pins_qsfp_rst_l 1 5 1 2960 1000n
+preplace netloc pa_sync_in_1 1 5 1 NJ 300
+preplace netloc pcie_bridge_0_axi_aclk 1 1 4 320 910 720J 890 1040 890 1360
+preplace netloc pcie_bridge_0_axi_aresetn 1 1 4 340 890 700 870 1000 870 1380
+preplace netloc qsfp_pins_qsfp_lp 1 5 1 N 1020
+preplace netloc qsfp_pins_qsfp_rst_l 1 5 1 N 1000
 preplace netloc AXI_CLOCK_CTL_1 1 2 1 NJ 460
 preplace netloc CLK_IN_D_0_1 1 0 1 NJ 400
 preplace netloc S_AXI_1 1 1 2 NJ 250 NJ
-preplace netloc S_AXI_2 1 3 2 NJ 90 1600
+preplace netloc S_AXI_2 1 3 2 NJ 90 N
 preplace netloc S_AXI_CTL_1 1 2 1 NJ 480
-preplace netloc S_AXI_CTL_2 1 3 2 NJ 240 1560J
-preplace netloc S_AXI_SENSOR_EMU_1 1 3 2 NJ 260 1520J
-preplace netloc channel_0_M_AXI 1 2 3 NJ 810 NJ 810 1420J
-preplace netloc channel_1_M_AXI 1 2 3 NJ 830 NJ 830 1380J
-preplace netloc channel_1_qsfp_gt 1 5 1 2880 730n
-preplace netloc eth0_gt_serial_port 1 5 1 2840 690n
-preplace netloc gt_ref_clk_0_1 1 5 1 2860 710n
-preplace netloc indy_lvds_0_LVDS_CLK 1 5 1 2600 240n
-preplace netloc indy_lvds_0_axis_out 1 4 1 1500J 320n
-preplace netloc init_clk_1 1 5 1 2820J 580n
+preplace netloc S_AXI_CTL_2 1 3 2 NJ 240 NJ
+preplace netloc S_AXI_SENSOR_EMU_1 1 3 2 NJ 260 NJ
+preplace netloc channel_0_M_AXI 1 2 3 NJ 810 NJ 810 NJ
+preplace netloc channel_1_M_AXI 1 2 3 NJ 830 NJ 830 NJ
+preplace netloc channel_1_qsfp_gt 1 5 1 N 730
+preplace netloc eth0_gt_serial_port 1 5 1 N 690
+preplace netloc gt_ref_clk_0_1 1 5 1 N 710
+preplace netloc indy_lvds_0_LVDS_CLK 1 5 1 N 240
+preplace netloc indy_lvds_0_axis_out 1 4 1 NJ 320
+preplace netloc init_clk_1 1 5 1 NJ 580
 preplace netloc pcie_bridge_M_AXI_B 1 1 2 NJ 400 NJ
 preplace netloc pcie_bridge_pcie_mgt 1 0 1 NJ 420
-preplace netloc qsfp_clk_0_1 1 5 1 2900 750n
+preplace netloc qsfp_clk_0_1 1 5 1 N 750
 preplace netloc smartconnect_M00_AXI 1 3 1 N 710
 preplace netloc smartconnect_M03_AXI 1 1 2 NJ 120 NJ
 preplace netloc smem_manager_S_AXI_RAM0_PCI 1 1 1 N 460
 preplace netloc smem_manager_S_AXI_RAM1_PCI 1 1 1 N 480
-preplace netloc tx0_in_1 1 4 1 1480 690n
-preplace netloc tx1_in_1 1 4 1 1460 710n
-preplace netloc frame_gen|clk_192_1 1 0 2 1750 110 N
-preplace netloc frame_gen|framegen_ctl_0_rs0 1 1 2 2030 30 2370J
-preplace netloc frame_gen|framegen_ctl_0_rs256 1 1 2 2050 50 2330J
-preplace netloc frame_gen|ilconstant_0_dout 1 2 1 2310J 360n
-preplace netloc frame_gen|ilconstant_1_dout 1 2 1 2350J 460n
-preplace netloc frame_gen|pa_sync_raw_1 1 0 2 1790 290 N
-preplace netloc frame_gen|raw_pa_sync_1 1 2 1 2290 290n
-preplace netloc frame_gen|resetn_192_1 1 0 1 1770 210n
-preplace netloc frame_gen|S_AXI_1 1 0 1 1730 170n
-levelinfo -pg 1 0 170 520 860 1190 1880 3000
-levelinfo -hier frame_gen * 1910 2170 *
-pagesize -pg 1 -db -bbox -sgen -210 -20 3200 1890
-pagesize -hier frame_gen -db -bbox -sgen 1700 10 2400 930
+preplace netloc tx0_in_1 1 4 1 N 690
+preplace netloc tx1_in_1 1 4 1 N 710
+levelinfo -pg 1 0 170 520 860 1190 1610 1840
+pagesize -pg 1 -db -bbox -sgen -210 0 2040 1080
 ",
-   "No Loops_ScaleFactor":"1.0",
-   "No Loops_TopLeft":"1406,209",
+   "No Loops_ScaleFactor":"0.59311",
+   "No Loops_TopLeft":"-221,3",
    "commentid":"",
    "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -175,9 +160,9 @@ pagesize -pg 1 -db -bbox -sgen -120 -290 950 270
 "
 }
 {
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"2",
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""da_bram_cntlr_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"2",
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""":"1",
-   """"""""""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""":"1",
-   """"""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""":"1"
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"2",
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""da_bram_cntlr_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"2",
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"1",
+   """"""""""""""""""""""""""""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""""""""""""""""""""""""":"1",
+   """"""""""""""""""""""""""""""""""""da_axi4_cnt"""""""""""""""""""""""""""""""""""":"1"
 }

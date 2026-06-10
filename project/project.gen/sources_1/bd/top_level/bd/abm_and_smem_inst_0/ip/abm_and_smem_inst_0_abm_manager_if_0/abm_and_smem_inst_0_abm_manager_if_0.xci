@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_abm_manager_if_0",
-    "cell_name": "abm_manager/abm_manager_if",
+    "cell_name": "abm_and_smem/abm_manager/abm_manager_if",
     "component_reference": "xilinx.com:module_ref:abm_manager_if:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

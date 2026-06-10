@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-//Date        : Tue Jun  9 19:05:48 2026
+//Date        : Wed Jun 10 01:49:12 2026
 //Host        : wolf-super-server running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -1153,7 +1153,6 @@ module frame_gen_imp_1DFNVFE
     S_AXI_wvalid,
     clk_192,
     pa_sync_in,
-    raw_pa_sync,
     resetn_192,
     rs0,
     rs256);
@@ -1180,7 +1179,6 @@ module frame_gen_imp_1DFNVFE
   input S_AXI_wvalid;
   input clk_192;
   input pa_sync_in;
-  input raw_pa_sync;
   input resetn_192;
   output rs0;
   output rs256;
@@ -1206,18 +1204,12 @@ module frame_gen_imp_1DFNVFE
   wire S_AXI_wready;
   wire [3:0]S_AXI_wstrb;
   wire S_AXI_wvalid;
-  wire clk_192_1;
-  wire framegen_ctl_0_rs0;
-  wire framegen_ctl_0_rs256;
-  wire pa_sync_raw_1;
-  wire raw_pa_sync_1;
+  wire clk_192;
+  wire pa_sync_in;
   wire resetn_192;
+  wire rs0;
+  wire rs256;
 
-  assign clk_192_1 = clk_192;
-  assign pa_sync_raw_1 = pa_sync_in;
-  assign raw_pa_sync_1 = raw_pa_sync;
-  assign rs0 = framegen_ctl_0_rs0;
-  assign rs256 = framegen_ctl_0_rs256;
   top_level_framegen_ctl_0_0 framegen_ctl
        (.S_AXI_ARADDR(S_AXI_araddr),
         .S_AXI_ARPROT(S_AXI_arprot),
@@ -1238,19 +1230,13 @@ module frame_gen_imp_1DFNVFE
         .S_AXI_WREADY(S_AXI_wready),
         .S_AXI_WSTRB(S_AXI_wstrb),
         .S_AXI_WVALID(S_AXI_wvalid),
-        .clk(clk_192_1),
-        .pa_sync_raw(pa_sync_raw_1),
+        .clk(clk_192),
+        .pa_sync_raw(pa_sync_in),
         .resetn(resetn_192),
-        .rs0(framegen_ctl_0_rs0),
-        .rs256(framegen_ctl_0_rs256));
+        .rs0(rs0),
+        .rs256(rs256));
   assign GPIO_BYTE_DIR = 1'h0;
-  assign GPIO15_DIR = 1'h0;
-  top_level_system_ila_0_0 system_ila_0
-       (.clk(clk_192_1),
-        .probe0(framegen_ctl_0_rs0),
-        .probe1(framegen_ctl_0_rs256),
-        .probe2(pa_sync_raw_1),
-        .probe3(raw_pa_sync_1));
+  assign GPIO15_DIR = 1'h1;
 endmodule
 
 module pcie_bridge_imp_1AINXYK
@@ -2013,7 +1999,7 @@ module rx_cdc_imp_X4GI8J
         .s_axis_tvalid(axis_register_slice_M_AXIS_TVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=99,numReposBlks=76,numNonXlnxBlks=0,numHierBlks=23,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=46,numPkgbdBlks=3,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_bram_cntlr_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
+(* CORE_GENERATION_INFO = "top_level,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=top_level,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=97,numReposBlks=74,numNonXlnxBlks=0,numHierBlks=23,maxHierDepth=3,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=46,numPkgbdBlks=3,bdsource=USER,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_bram_cntlr_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=2,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"da_axi4_cnt\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "top_level.hwdef" *) 
 module top_level
    (CHIP_HSI_CLK,
     CHIP_HSI_CMD,
@@ -2910,7 +2896,6 @@ module top_level
         .S_AXI_wvalid(S_AXI_2_WVALID),
         .clk_192(clk_wiz_clk192),
         .pa_sync_in(indy_lvds_pa_sync_out),
-        .raw_pa_sync(CHIP_PA_SYNC),
         .resetn_192(clk_192_resetn_192),
         .rs0(rs0),
         .rs256(rs256));

@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_chip_spi_0",
-    "cell_name": "chip_spi_mux/chip_spi",
+    "cell_name": "abm_and_smem/chip_spi_mux/chip_spi",
     "component_reference": "xilinx.com:module_ref:chip_spi:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

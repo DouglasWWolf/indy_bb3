@@ -330,12 +330,12 @@
       },
       "address_spaces": {
         "M_ABM": {
-          "range": "1048576",
+          "range": "0x100000",
           "display_name": "M_ABM",
           "width": "512"
         },
         "M_SMC": {
-          "range": "1048576",
+          "range": "0x100000",
           "display_name": "M_SMC",
           "width": "512"
         }

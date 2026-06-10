@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_fetch_abm_0",
-    "cell_name": "smem_writer/fetch_abm",
+    "cell_name": "abm_and_smem/smem_writer/fetch_abm",
     "component_reference": "xilinx.com:module_ref:fetch_abm:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

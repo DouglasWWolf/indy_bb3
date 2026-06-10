@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_clock_mgr_ctl_0",
-    "cell_name": "chipif_cdc/clock_manager/clock_mgr_ctl",
+    "cell_name": "abm_and_smem/chipif_cdc/clock_manager/clock_mgr_ctl",
     "component_reference": "xilinx.com:module_ref:clock_mgr_ctl:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

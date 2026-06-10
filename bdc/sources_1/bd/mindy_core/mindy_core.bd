@@ -20,8 +20,7 @@
       "mindy_core_ctl": "",
       "rdmx_xmit_0": "",
       "rdmx_xmit_1": "",
-      "mc_sim_metadata": "",
-      "frame_ila": ""
+      "mc_sim_metadata": ""
     },
     "interface_ports": {
       "AXIS_FD_IN": {
@@ -3744,37 +3743,13 @@
             }
           }
         }
-      },
-      "frame_ila": {
-        "vlnv": "xilinx.com:ip:system_ila:1.1",
-        "ip_revision": "19",
-        "xci_name": "mindy_core_system_ila_0_0",
-        "xci_path": "ip/mindy_core_system_ila_0_0/mindy_core_system_ila_0_0.xci",
-        "inst_hier_path": "frame_ila",
-        "parameters": {
-          "C_DATA_DEPTH": {
-            "value": "2048"
-          },
-          "C_SLOT_0_INTF_TYPE": {
-            "value": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        },
-        "interface_ports": {
-          "SLOT_0_AXIS": {
-            "mode": "Monitor",
-            "monitor_type": "SlaveType",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        }
       }
     },
     "interface_nets": {
       "AXIS_FD_IN_1": {
         "interface_ports": [
           "mindy_if/AXIS_FD_IN",
-          "AXIS_FD_IN",
-          "frame_ila/SLOT_0_AXIS"
+          "AXIS_FD_IN"
         ]
       },
       "S_AXI_CTL_1": {
@@ -3927,8 +3902,7 @@
           "rdmx_xmit_0/src_clk",
           "mindy_if/clk",
           "mc_sim_metadata/clk",
-          "mindy_core_ctl/clk",
-          "frame_ila/clk"
+          "mindy_core_ctl/clk"
         ]
       },
       "sys_resetn_1": {

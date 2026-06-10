@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_chip_if_cdc_0",
-    "cell_name": "chipif_cdc/chip_if_cdc",
+    "cell_name": "abm_and_smem/chipif_cdc/chip_if_cdc",
     "component_reference": "xilinx.com:module_ref:chip_if_cdc:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

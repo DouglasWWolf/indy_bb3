@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_smem_extra_flops_0",
-    "cell_name": "abm_and_smem/smem_writer/smem_extra_flops",
+    "cell_name": "smem_writer/smem_extra_flops",
     "component_reference": "xilinx.com:module_ref:smem_extra_flops:1.0",
     "ip_revision": "1",
     "gen_directory": ".",

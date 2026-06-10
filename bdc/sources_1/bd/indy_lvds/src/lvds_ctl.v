@@ -172,7 +172,7 @@ localparam REG_MAX_LANE_SKEW = 8;
     @rdesc    causes valid data to be latched into the above mentioned registers
     @rtype    ro
 */
-localparam REG_REG_MISS_HDR_STATUS = 9;
+localparam REG_MISS_HDR_STATUS = 9;
 
 /*
     @register If the last read of LVDS_MISS_HDR_STATUS returned a 1, this register
@@ -366,17 +366,17 @@ always @(posedge clk) begin
             // When the user reads the MISS_HDR_STAT register and there is
             // data waiting on the "missing_hdr" AXI stream, we fetch the data
             // from the AXI stream into registers
-            REG_REG_MISS_HDR_STATUS : if (missing_hdr_tvalid) begin
-                                    missing_hdr_frame  <= missing_hdr_tdata;
-                                    missing_hdr_lanes  <= missing_hdr_tuser;
-                                    missing_hdr_tready <= 1;
-                                    ashi_rdata         <= 1;
-                                end else begin
-                                    missing_hdr_frame  <= 0;
-                                    missing_hdr_lanes  <= 0;
-                                    missing_hdr_tready <= 0;
-                                    ashi_rdata         <= 0;
-                                end
+            REG_MISS_HDR_STATUS : if (missing_hdr_tvalid) begin
+                                      missing_hdr_frame  <= missing_hdr_tdata;
+                                      missing_hdr_lanes  <= missing_hdr_tuser;
+                                      missing_hdr_tready <= 1;
+                                      ashi_rdata         <= 1;
+                                  end else begin
+                                      missing_hdr_frame  <= 0;
+                                      missing_hdr_lanes  <= 0;
+                                      missing_hdr_tready <= 0;
+                                      ashi_rdata         <= 0;
+                                  end
 
 
 

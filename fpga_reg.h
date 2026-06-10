@@ -350,14 +350,14 @@
 
 
 //
-// Register:    LVDS_REG_MISS_HDR_STATUS
+// Register:    LVDS_MISS_HDR_STATUS
 // Size:        32-bits
 // Type:        Read only
 // Description: The status of the "missing header" registers LVDS_MISS_HDR_FRAME and
 //              LVDS_MISS_HDR_LANES.  Reading this register (when it returns a 1)
 //              causes valid data to be latched into the above mentioned registers
 //
-#define LVDS_REG_MISS_HDR_STATUS                                     0x0000000000001424ULL
+#define LVDS_MISS_HDR_STATUS                                         0x0000000000001424ULL
 
 
 //

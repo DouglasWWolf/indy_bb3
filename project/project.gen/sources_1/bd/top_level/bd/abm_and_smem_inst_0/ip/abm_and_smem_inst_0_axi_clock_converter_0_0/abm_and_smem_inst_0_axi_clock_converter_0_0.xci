@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_axi_clock_converter_0_0",
-    "cell_name": "abm_and_smem/chipif_cdc/axi_clock_converter_0",
+    "cell_name": "chipif_cdc/axi_clock_converter_0",
     "component_reference": "xilinx.com:ip:axi_clock_converter:2.1",
     "ip_revision": "32",
     "gen_directory": ".",

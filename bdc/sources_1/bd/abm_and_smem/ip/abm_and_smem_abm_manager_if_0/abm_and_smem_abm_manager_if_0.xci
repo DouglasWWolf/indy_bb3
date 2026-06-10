@@ -197,7 +197,7 @@
           "address_blocks": {
             "reg0": {
               "base_address": "0x0",
-              "range": "0x100000",
+              "range": "1048576",
               "display_name": "reg0",
               "usage": "register"
             }

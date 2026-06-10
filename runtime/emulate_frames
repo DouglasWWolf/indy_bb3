@@ -55,7 +55,7 @@ axi SEMU_START 0
 # Generate the four frames of data by strobing RS0 and waiting
 # for the frame to be emitted
 for ((i=0; i<4; i++)); do
-    pcireg 0x3000 1
+    pcireg 0x3000 0
     sleep .1
 done
 

@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_smem_cache_ctl_0",
-    "cell_name": "abm_and_smem/smem_writer/cache/smem_cache_ctl",
+    "cell_name": "smem_writer/cache/smem_cache_ctl",
     "component_reference": "xilinx.com:ip:axi_bram_ctrl:4.1",
     "ip_revision": "11",
     "gen_directory": ".",

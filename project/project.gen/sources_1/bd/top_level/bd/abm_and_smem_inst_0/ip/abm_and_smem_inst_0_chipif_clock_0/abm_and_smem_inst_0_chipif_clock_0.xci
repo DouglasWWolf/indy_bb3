@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "abm_and_smem_inst_0_chipif_clock_0",
-    "cell_name": "abm_and_smem/chipif_cdc/clock_manager/chipif_clock",
+    "cell_name": "chipif_cdc/clock_manager/chipif_clock",
     "component_reference": "xilinx.com:ip:clk_wiz:6.0",
     "ip_revision": "15",
     "gen_directory": ".",

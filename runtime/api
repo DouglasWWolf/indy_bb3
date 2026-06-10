@@ -98,7 +98,7 @@ chip_reg()
             pcireg $REG_CHIPIO_CMD $READ
         else  
             pcireg $REG_CHIPIO_DATA $value
-            pcireg $REG_CHIPIO_CMD $WRITE
+            pcireg $REG_CHIPIO_CMD  $WRITE
         fi
 
         # Wait for the read or write to complete
@@ -118,7 +118,7 @@ chip_reg()
     #--------------------------------------------------
     
     # This is the value we're trying to write into the sub-field
-    local field_value=$2
+    local field_value=$value
 
     # Parse the field width and position from the descriptor
     local width=$(( (descriptor >> 56) & 0xFF ))
@@ -128,6 +128,10 @@ chip_reg()
     local mask=$(( ((1 << width)-1) << pos ))
 
     # Read the current value of the field
+    pcireg $REG_CHIPIO_CMD $READ
+    while [ $(pcireg -dec $REG_CHIPIO_CMD ) -ne 0 ]; do
+        sleep .001
+    done
     local current=$(pcireg $REG_CHIPIO_DATA -dec)
    
     # Compute the new value of the field
@@ -136,8 +140,6 @@ chip_reg()
     # And set the new value of the field
     pcireg $REG_CHIPIO_DATA $new_value
     pcireg $REG_CHIPIO_CMD  $WRITE
-
-    # Wait for the read or write to complete
     while [ $(pcireg -dec $REG_CHIPIO_CMD ) -ne 0 ]; do
         sleep .001
     done

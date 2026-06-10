@@ -3391,11 +3391,11 @@
           "clk_192",
           "lvds_source/clk",
           "clk_768mhz/clk_in1",
-          "lvds_ctl/clk",
           "lvds_align_detect/clk",
           "lvds_prbs15_check/clk",
           "lvds_datapath/clk",
-          "axis_clock_converter/s_axis_aclk"
+          "axis_clock_converter/s_axis_aclk",
+          "lvds_ctl/clk"
         ]
       },
       "clk_768mhz_clk_768": {
@@ -3532,9 +3532,9 @@
         "ports": [
           "resetn_192",
           "lvds_source/resetn",
-          "lvds_ctl/resetn",
           "lvds_datapath/resetn",
-          "axis_clock_converter/s_axis_aresetn"
+          "axis_clock_converter/s_axis_aresetn",
+          "lvds_ctl/resetn"
         ]
       },
       "sys_clk_1": {

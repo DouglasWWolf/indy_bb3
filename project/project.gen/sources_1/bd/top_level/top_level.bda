@@ -259,7 +259,7 @@
                 "BP": "axibar_0",
                 "HP": "axibar_highaddr_0",
                 "MX": "/abm_and_smem",
-                "MI": "S_AXI_RAM0_PCI",
+                "MI": "M_AXI_RAM0_PCI",
                 "SX": "/pcie_bridge/pcie_bridge_0",
                 "SI": "S_AXI_B",
                 "SS": "BAR0",
@@ -272,7 +272,7 @@
                 "BP": "axibar_0",
                 "HP": "axibar_highaddr_0",
                 "MX": "/abm_and_smem",
-                "MI": "S_AXI_RAM1_PCI",
+                "MI": "M_AXI_RAM1_PCI",
                 "SX": "/pcie_bridge/pcie_bridge_0",
                 "SI": "S_AXI_B",
                 "SS": "BAR0",
@@ -1595,11 +1595,6 @@
                 "EH": "1914"
             },
             {
-                "src": "V44",
-                "trg": "V17",
-                "EH": "2030"
-            },
-            {
                 "src": "V45",
                 "trg": "V11",
                 "EH": "6"
@@ -1628,11 +1623,6 @@
                 "src": "V45",
                 "trg": "V16",
                 "EH": "1914"
-            },
-            {
-                "src": "V45",
-                "trg": "V17",
-                "EH": "2030"
             },
             {
                 "src": "V46",

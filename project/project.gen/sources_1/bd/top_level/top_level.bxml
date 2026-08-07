@@ -51,13 +51,6 @@
           <BDFile BDFilePath="bd/mindy_core_inst_0/mindy_core_inst_0.bd" BDFileset="mindy_core_inst_0" BDSourceFile="../../../../../bdc/sources_1/bd/mindy_core/mindy_core.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
         </VariantsCollection>
       </BlockContainer>
-      <BlockContainer InstPath="/abm_and_smem" IsPR="false" State="Validated">
-        <ActiveVariantSynth FileName="bd/abm_and_smem_inst_0/abm_and_smem_inst_0.bd"/>
-        <ActiveVariantSim FileName="bd/abm_and_smem_inst_0/abm_and_smem_inst_0.bd"/>
-        <VariantsCollection>
-          <BDFile BDFilePath="bd/abm_and_smem_inst_0/abm_and_smem_inst_0.bd" BDFileset="abm_and_smem_inst_0" BDSourceFile="../../../../../bdc/sources_1/bd/abm_and_smem/abm_and_smem.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
-        </VariantsCollection>
-      </BlockContainer>
       <BlockContainer InstPath="/indy_lvds" IsPR="false" State="Stale">
         <ActiveVariantSynth FileName="bd/indy_lvds_inst_0/indy_lvds_inst_0.bd"/>
         <ActiveVariantSim FileName="bd/indy_lvds_inst_0/indy_lvds_inst_0.bd"/>
@@ -65,21 +58,39 @@
           <BDFile BDFilePath="bd/indy_lvds_inst_0/indy_lvds_inst_0.bd" BDFileset="indy_lvds_inst_0" BDSourceFile="../../../../../bdc/sources_1/bd/indy_lvds/indy_lvds.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
         </VariantsCollection>
       </BlockContainer>
+      <BlockContainer InstPath="/abm_and_smem" IsPR="false" State="Stale">
+        <ActiveVariantSynth FileName="bd/abm_and_smem_inst_0/abm_and_smem_inst_0.bd"/>
+        <ActiveVariantSim FileName="bd/abm_and_smem_inst_0/abm_and_smem_inst_0.bd"/>
+        <VariantsCollection>
+          <BDFile BDFilePath="bd/abm_and_smem_inst_0/abm_and_smem_inst_0.bd" BDFileset="abm_and_smem_inst_0" BDSourceFile="../../../../../bdc/sources_1/bd/abm_and_smem/abm_and_smem.bd" BDSourceFileset="sources_1" BDVariantType="ALL"/>
+        </VariantsCollection>
+      </BlockContainer>
     </BlockContainerCollection>
     <ReferenceCollection>
-      <ModuleReference TargetName="mindy_core" Type="Block Design" SubInstancePath="top_level_mindy_core_0">
-        <TopFile Name="../../../../../bdc/sources_1/bd/mindy_core/mindy_core.bd"/>
+      <ModuleReference TargetName="indy_lvds" Type="Block Design" SubInstancePath="top_level_indy_lvds_0">
+        <TopFile Name="../../../../../bdc/sources_1/bd/indy_lvds/indy_lvds.bd"/>
         <FileCollection>
-          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/rdmx_shim.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/ping_ponger.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/mindy_if.v"/>
           <File Name="../../../../src/common/axi4_lite_slave.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/mindy_core_ctl.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/rdmx_xmit_be.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/rdmx_xmit_fe.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/rdmx_xmit.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/mc_sim_metadata.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/mindy_core/mindy_core.bd"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_ctl.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/xcix/indy_lvds_bank71/indy_lvds_bank71.xci"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/xcix/indy_lvds_bank70/indy_lvds_bank70.xci"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/xcix/indy_lvds_bank69/indy_lvds_bank69.xci"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_lane_map.vh"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/hssio.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_bitslip.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/sensor_emu_ctl.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/sensor_emu_gen.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/sensor_emu_ctl_axi.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_switch.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_align_detect.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_prbs_check.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_lane_framer.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_framer.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_lane_fifo.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_lane_sync.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_bank_reorder.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_reorder.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/indy_lvds.bd"/>
         </FileCollection>
       </ModuleReference>
       <ModuleReference TargetName="abm_and_smem" Type="Block Design" SubInstancePath="top_level_abm_and_smem_0">
@@ -113,30 +124,19 @@
           <File Name="../../../../../bdc/sources_1/bd/abm_and_smem/abm_and_smem.bd"/>
         </FileCollection>
       </ModuleReference>
-      <ModuleReference TargetName="indy_lvds" Type="Block Design" SubInstancePath="top_level_indy_lvds_0">
-        <TopFile Name="../../../../../bdc/sources_1/bd/indy_lvds/indy_lvds.bd"/>
+      <ModuleReference TargetName="mindy_core" Type="Block Design" SubInstancePath="top_level_mindy_core_0">
+        <TopFile Name="../../../../../bdc/sources_1/bd/mindy_core/mindy_core.bd"/>
         <FileCollection>
+          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/rdmx_shim.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/ping_ponger.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/mindy_if.v"/>
           <File Name="../../../../src/common/axi4_lite_slave.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_ctl.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/xcix/indy_lvds_bank71/indy_lvds_bank71.xci"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/xcix/indy_lvds_bank70/indy_lvds_bank70.xci"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/xcix/indy_lvds_bank69/indy_lvds_bank69.xci"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_lane_map.vh"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/hssio.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_bitslip.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/sensor_emu_ctl.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/sensor_emu_gen.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/sensor_emu_ctl_axi.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_switch.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_align_detect.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_prbs_check.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_lane_framer.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_framer.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_lane_fifo.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_lane_sync.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_bank_reorder.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/src/lvds_reorder.v"/>
-          <File Name="../../../../../bdc/sources_1/bd/indy_lvds/indy_lvds.bd"/>
+          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/mindy_core_ctl.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/rdmx_xmit_be.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/rdmx_xmit_fe.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/rdmx_xmit.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/mindy_core/src/mc_sim_metadata.v"/>
+          <File Name="../../../../../bdc/sources_1/bd/mindy_core/mindy_core.bd"/>
         </FileCollection>
       </ModuleReference>
     </ReferenceCollection>

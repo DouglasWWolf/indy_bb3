@@ -316,42 +316,6 @@
             },
             "V10": {
                 "VT": "AC",
-                "BA": "0x0000000000000000",
-                "HA": "0xFFFFFFFFFFFFFFFF",
-                "BP": "axibar_0",
-                "HP": "axibar_highaddr_0",
-                "MA": "PCI_AXI",
-                "MX": "/abm_manager/abm_loader_0",
-                "MI": "PCI_AXI",
-                "MS": "SEG_pcie_bridge_0_BAR0",
-                "MV": "xilinx.com:module_ref:abm_loader:1.0",
-                "SX": "/",
-                "SI": "S_AXI_RAM0_PCI",
-                "SS": ":pcie_bridge:pcie_bridge_0:S_AXI_B:BAR0",
-                "SV": "::abm_and_smem_inst_0_imp:",
-                "TM": "both",
-                "TU": "memory"
-            },
-            "V11": {
-                "VT": "AC",
-                "BA": "0x0000000000000000",
-                "HA": "0xFFFFFFFFFFFFFFFF",
-                "BP": "axibar_0",
-                "HP": "axibar_highaddr_0",
-                "MA": "PCI_AXI",
-                "MX": "/abm_manager/abm_loader_1",
-                "MI": "PCI_AXI",
-                "MS": "SEG_pcie_bridge_0_BAR0",
-                "MV": "xilinx.com:module_ref:abm_loader:1.0",
-                "SX": "/",
-                "SI": "S_AXI_RAM1_PCI",
-                "SS": ":pcie_bridge:pcie_bridge_0:S_AXI_B:BAR0",
-                "SV": "::abm_and_smem_inst_0_imp:",
-                "TM": "both",
-                "TU": "memory"
-            },
-            "V12": {
-                "VT": "AC",
                 "BA": "0x1000",
                 "HA": "0x10FF",
                 "BP": "C_BASEADDR",
@@ -368,7 +332,7 @@
                 "TM": "both",
                 "TU": "register"
             },
-            "V13": {
+            "V11": {
                 "VT": "AC",
                 "BA": "0x9000",
                 "HA": "0x9FFF",
@@ -438,16 +402,6 @@
             },
             {
                 "src": "V11",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V12",
-                "trg": "V2",
-                "EH": "2"
-            },
-            {
-                "src": "V13",
                 "trg": "V2",
                 "EH": "2"
             }

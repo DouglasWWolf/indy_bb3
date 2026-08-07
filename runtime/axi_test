@@ -1,0 +1,9 @@
+source api
+for i in {1..65535}; do
+    pcireg REG_CHIPIO_ADDR $i
+    pcireg REG_CHIPIO_DATA 123457
+    x=$(pcireg -dec REG_CHIPIO_ADDR)
+    if [ $i -ne $x ]; then
+        echo Wrote $i, saw $x
+    fi
+done

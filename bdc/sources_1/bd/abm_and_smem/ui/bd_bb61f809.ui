@@ -64,8 +64,8 @@ preplace netloc axi_clock_converter_0_M_AXI1 1 1 2 N 540 NJ
 levelinfo -pg 1 0 280 530 570
 pagesize -pg 1 -db -bbox -sgen -240 0 1750 900
 ",
-   "No Loops_ScaleFactor":"1.0",
-   "No Loops_TopLeft":"-424,50",
+   "No Loops_ScaleFactor":"0.899123",
+   "No Loops_TopLeft":"-476,3",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
 levelinfo -pg 1 0 10
